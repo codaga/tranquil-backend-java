@@ -1,3 +1,7 @@
+package org.codaga.tranquil;
+
+import org.codaga.tranquil.utils.PostgresConnection;
+
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
@@ -8,7 +12,7 @@ public class Practitioner {
     public Practitioner(int id, String name) {
         this.id = id;
         this.name = name;
-    };
+    }
 
     public int getId() {
         return this.id;
@@ -29,9 +33,9 @@ public class Practitioner {
     public void save() {
         String SQL = "INSERT INTO practitioner(id, name) VALUES(?,?)";
         PostgresConnection postConn = new PostgresConnection();
-        postConn.getConnection();
+//        postConn.getConnection();
 
-        try (PreparedStatement pstmt = postConn.conn.prepareStatement(SQL)) {
+        try (PreparedStatement pstmt = postConn.getConnection().prepareStatement(SQL)) {
             pstmt.setInt(1, getId());
             pstmt.setString(2, getName());
             pstmt.execute();

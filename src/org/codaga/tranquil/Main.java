@@ -1,3 +1,5 @@
+package org.codaga.tranquil;
+
 public class Main {
 
     public static void main(String[] args) {
