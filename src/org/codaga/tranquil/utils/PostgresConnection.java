@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class PostgresConnection {
-    Connection conn;
+    private Connection conn;
     public PostgresConnection() {
         try {
             conn = DriverManager.getConnection("jdbc:postgresql://127.0.0.1:5432/tranquil", "postgres", "password");

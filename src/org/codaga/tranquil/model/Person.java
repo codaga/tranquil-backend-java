@@ -1,13 +1,13 @@
 package org.codaga.tranquil.model;
 
-public class Person {
+public class Person extends DataObject{
     private int id;
     private String firstName;
     private String lastName;
     private char gender;
     private String dateOfBirth;
 
-    public Person() {
+        public Person() {
     }
 
     public Person(String firstName, String lastName, char gender, String dateOfBirth) {
@@ -48,4 +48,6 @@ public class Person {
     public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
+
+
 }
