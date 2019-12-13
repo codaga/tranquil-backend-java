@@ -1,16 +1,18 @@
 package org.codaga.tranquil.model;
 
+import java.sql.Date;
+
 public class Person extends DataObject{
     private int id;
     private String firstName;
     private String lastName;
     private char gender;
-    private String dateOfBirth;
+    private Date dateOfBirth;
 
         public Person() {
     }
 
-    public Person(String firstName, String lastName, char gender, String dateOfBirth) {
+    public Person(String firstName, String lastName, char gender, Date dateOfBirth) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
@@ -41,13 +43,20 @@ public class Person extends DataObject{
         this.gender = gender;
     }
 
-    public String getDateOfBirth() {
+//    public String getDateOfBirth() {
+//        return dateOfBirth;
+//    }
+//
+//    public void setDateOfBirth(String dateOfBirth) {
+//        this.dateOfBirth = dateOfBirth;
+//    }
+
+
+    public Date getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
+    public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
-
-
 }
