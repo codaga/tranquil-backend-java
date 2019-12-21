@@ -9,7 +9,8 @@ public class Person extends DataObject{
     private char gender;
     private Date dateOfBirth;
 
-        public Person() {
+    public Person() {
+
     }
 
     public Person(String firstName, String lastName, char gender, Date dateOfBirth) {
@@ -42,15 +43,6 @@ public class Person extends DataObject{
     public void setGender(char gender) {
         this.gender = gender;
     }
-
-//    public String getDateOfBirth() {
-//        return dateOfBirth;
-//    }
-//
-//    public void setDateOfBirth(String dateOfBirth) {
-//        this.dateOfBirth = dateOfBirth;
-//    }
-
 
     public Date getDateOfBirth() {
         return dateOfBirth;

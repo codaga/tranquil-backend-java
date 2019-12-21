@@ -8,8 +8,8 @@ import java.time.LocalDate;
 public class Main {
 
     public static void main(String[] args) {
-        String SQL = "INSERT INTO practitioner(firstname, lastname, gender,dateofbirth) VALUES(?,?,?,?)";
-        Practitioner coolDoc = new Practitioner("Tim","Hallen",'M', Date.valueOf(LocalDate.now()), "Cognitive");
-        coolDoc.save(SQL,coolDoc);
+        Practitioner coolDoc = new Practitioner("Davis","Ok",'M', Date.valueOf(LocalDate.now()));
+        coolDoc.createSQL();
+
     }
 }
