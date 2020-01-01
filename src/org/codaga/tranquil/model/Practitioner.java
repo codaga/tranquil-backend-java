@@ -1,5 +1,7 @@
 package org.codaga.tranquil.model;
 
+import org.codaga.tranquil.utils.Validator;
+
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -14,6 +16,10 @@ public class Practitioner extends Person {
 
     public Practitioner(String firstName, String lastName, char gender, Date dateOfBirth) {
         super(firstName, lastName, gender, dateOfBirth);
+    }
+
+    public boolean validate(Date dateOfBirth) {
+        return Validator.validateDateOfBirth(dateOfBirth);
     }
 
     public void createSQL() {
